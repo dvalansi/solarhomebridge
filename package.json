@@ -1,0 +1,13 @@
+{
+  "name": "homebridge-pvs6-tiles",
+  "displayName": "PVS6 Number Tiles",
+  "version": "1.0.0",
+  "description": "Shows SunPower/SunStrong PVS6 house usage, solar, and grid watts as number tiles in the Apple Home app (light sensors where lux = watts).",
+  "author": "Dennis Valansi",
+  "license": "MIT",
+  "main": "index.js",
+  "files": ["index.js", "lib", "config.schema.json", "README.md"],
+  "keywords": ["homebridge-plugin", "pvs6", "sunpower", "sunstrong", "solar", "energy"],
+  "engines": { "node": ">=18.0.0", "homebridge": ">=1.8.0 || >=2.0.0" },
+  "peerDependencies": { "homebridge": ">=1.8.0 || >=2.0.0" }
+}

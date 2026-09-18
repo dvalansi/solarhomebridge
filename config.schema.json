@@ -1,0 +1,40 @@
+{
+  "pluginAlias": "PVS6Tiles",
+  "pluginType": "platform",
+  "singular": true,
+  "headerDisplay": "Number tiles for the Apple Home app. Each tile is a light sensor whose lux reading equals watts. If homebridge-pvs6 already has a Host and Serial Number set, you can leave those blank here.",
+  "schema": {
+    "type": "object",
+    "properties": {
+      "name": { "title": "Name", "type": "string", "default": "PVS6 Tiles" },
+      "host": {
+        "title": "PVS6 Host (optional)",
+        "type": "string",
+        "placeholder": "192.168.1.60",
+        "description": "Leave blank to reuse the homebridge-pvs6 settings."
+      },
+      "serialNumber": {
+        "title": "PVS6 Serial Number (optional)",
+        "type": "string",
+        "placeholder": "ZT...",
+        "description": "Leave blank to reuse the homebridge-pvs6 settings."
+      },
+      "pollInterval": {
+        "title": "Update Interval (seconds)",
+        "type": "integer",
+        "default": 30,
+        "minimum": 15,
+        "description": "The PVS6 is also polled by homebridge-pvs6 and the Sunflower app, so 30 seconds or more is recommended."
+      },
+      "houseName": { "title": "House Usage tile name", "type": "string", "default": "House Usage" },
+      "solarTile": { "title": "Add a \"Solar Now\" tile (watts)", "type": "boolean", "default": false },
+      "gridTiles": { "title": "Add \"Grid Buying\" and \"Grid Selling\" tiles (watts)", "type": "boolean", "default": false },
+      "solarTodayTile": {
+        "title": "Add a \"Solar Today\" tile (watt-hours)",
+        "type": "boolean",
+        "default": false,
+        "description": "Resets at midnight. Shows Wh, so 24,350 means 24.35 kWh."
+      }
+    }
+  }
+}
